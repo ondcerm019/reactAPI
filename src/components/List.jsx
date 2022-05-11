@@ -11,7 +11,7 @@ export const List = ({date}) => {
         let formattedDate = date.getFullYear() + "" + date.getMonth() + "" + date.getDate();
         axios.get("https://www.pslib.cz/tomas.kazda/api/kurzycnbapi.php", date)
         .then(res => {
-            setResponse(res.date);
+            setResponse(res.data);
         })
         .catch(err => {
             setResponse(null);
